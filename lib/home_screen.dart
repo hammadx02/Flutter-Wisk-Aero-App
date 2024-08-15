@@ -10,7 +10,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Wisk',
-          style: GoogleFonts.notoSansTifinagh(),
+          style: GoogleFonts.exo2(
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+          ),
         ),
         centerTitle: false,
         backgroundColor: Colors.transparent,
