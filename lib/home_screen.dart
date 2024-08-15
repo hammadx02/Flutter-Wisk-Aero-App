@@ -7,7 +7,14 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Image.asset('assets/images/logo.png'),
+        title: SizedBox(
+          height: 150,
+          width: 150,
+          child: Image.asset(
+            'assets/images/logo.png',
+            color: Colors.black,
+          ),
+        ),
         centerTitle: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
