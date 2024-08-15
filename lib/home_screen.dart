@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
+import 'package:iconsax/iconsax.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -24,9 +26,9 @@ class HomeScreen extends StatelessWidget {
           Container(
             height: 50,
             width: 50,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Color(0XFFFFFFFF),
+              color: Colors.grey[100],
             ),
             child: const Icon(IconlyLight.notification),
           ),
@@ -88,6 +90,18 @@ class HomeScreen extends StatelessWidget {
             child: Image.asset(
               fit: BoxFit.cover,
               'assets/images/air_taxi.png',
+            ),
+          ),
+          Container(
+            height: 60,
+            width: 60,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.grey[100],
+            ),
+            child: const Icon(
+              CupertinoIcons.arrow_counterclockwise,
+              size: 30,
             ),
           ),
         ],
