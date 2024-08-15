@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -44,6 +45,42 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.grey[300],
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Electric\nAir Taxi',
+                  style: GoogleFonts.dmSans(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Container(
+                  height: 40,
+                  width: 90,
+                  decoration: BoxDecoration(
+                    color: const Color(0XFFF9F940),
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: Center(
+                    child: Text(
+                      '8 Flights',
+                      style: GoogleFonts.dmSans(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
