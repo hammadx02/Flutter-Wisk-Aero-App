@@ -9,8 +9,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: SizedBox(
-          height: 150,
-          width: 150,
+          height: 120,
+          width: 120,
           child: Image.asset(
             'assets/images/logo.png',
             color: Colors.black,
