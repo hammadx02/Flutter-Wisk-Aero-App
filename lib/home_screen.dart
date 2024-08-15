@@ -45,11 +45,11 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.grey[300],
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          children: [
-            Row(
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
@@ -78,8 +78,19 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+          SizedBox(
+            height: 300,
+            width: double.infinity,
+            child: Image.asset(
+              fit: BoxFit.cover,
+              'assets/images/air_taxi.png',
+            ),
+          ),
+        ],
       ),
     );
   }
