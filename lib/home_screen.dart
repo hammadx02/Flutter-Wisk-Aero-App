@@ -55,9 +55,10 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Text(
                   'Electric\nAir Taxi',
-                  style: GoogleFonts.dmSans(
+                  style: GoogleFonts.poppins(
                     fontSize: 36,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w600,
+                    wordSpacing: 2,
                   ),
                 ),
                 Container(
@@ -98,9 +99,9 @@ class HomeScreen extends StatelessWidget {
               shape: BoxShape.circle,
               color: Colors.grey[100],
             ),
-            child: const Icon(
-              CupertinoIcons.arrow_counterclockwise,
-              size: 30,
+            child: Image.asset(
+              scale: 15,
+              'assets/images/360.png',
             ),
           ),
         ],
