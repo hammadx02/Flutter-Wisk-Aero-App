@@ -47,6 +47,8 @@ class HomeScreen extends StatelessWidget {
       ),
       backgroundColor: Colors.grey[300],
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: const EdgeInsets.all(15.0),
@@ -92,22 +94,49 @@ class HomeScreen extends StatelessWidget {
               'assets/images/air_taxi.png',
             ),
           ),
-          Container(
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey[100],
-            ),
-            child: Image.asset(
-              scale: 15,
-              'assets/images/360.png',
+          Center(
+            child: Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.grey[100],
+              ),
+              child: Image.asset(
+                scale: 15,
+                'assets/images/360.png',
+              ),
             ),
           ),
           const SizedBox(
             height: 20,
           ),
-          
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: Row(
+              children: [
+                Container(
+                  height: 200,
+                  width: 204.5,
+                  decoration: BoxDecoration(
+                    color: const Color(0XFFF9F940),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  height: 200,
+                  width: 204.5,
+                  decoration: BoxDecoration(
+                    color: const Color(0XFFFFFFFF),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
