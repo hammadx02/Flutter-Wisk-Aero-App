@@ -23,8 +23,8 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
         actions: [
           Container(
-            height: 50,
-            width: 50,
+            height: 52,
+            width: 52,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.grey[100],
