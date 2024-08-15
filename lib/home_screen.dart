@@ -104,6 +104,10 @@ class HomeScreen extends StatelessWidget {
               'assets/images/360.png',
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          
         ],
       ),
     );
