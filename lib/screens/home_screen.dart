@@ -402,10 +402,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
-import 'package:wisk_aero_app/bottom_nav_bar.dart';
+import 'package:wisk_aero_app/widgets/bottom_nav_bar.dart';
 
-import 'animations.dart';
-import 'widgets.dart';
+import '../animations/animations.dart';
+import '../widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
