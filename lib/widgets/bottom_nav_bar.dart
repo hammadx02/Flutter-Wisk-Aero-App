@@ -22,20 +22,40 @@ Widget buildBottomNavigationBar(BuildContext context, int selectedIndex, void Fu
         final isActive = selectedIndex == index;
         return GestureDetector(
           onTap: () => onIconTapped(index),
-          child: AnimatedContainer(
+          child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 300),
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: isActive ? Colors.white : Colors.transparent,
-            ),
-            child: Center(
-              child: Icon(
-                _getIconForIndex(index),
-                color: isActive ? Colors.black : Colors.grey,
-              ),
-            ),
+            child: isActive
+                ? AnimatedContainer(
+                    key: ValueKey<int>(index),
+                    duration: const Duration(milliseconds: 300),
+                    height: 60,
+                    width: 60,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.white,
+                    ),
+                    child: Center(
+                      child: Icon(
+                        _getIconForIndex(index),
+                        color: Colors.black,
+                      ),
+                    ),
+                  )
+                : Container(
+                    key: ValueKey<int>(index),
+                    height: 60,
+                    width: 60,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.transparent,
+                    ),
+                    child: Center(
+                      child: Icon(
+                        _getIconForIndex(index),
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ),
           ),
         );
       }),
