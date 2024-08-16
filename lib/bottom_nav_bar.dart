@@ -1,54 +1,61 @@
 import 'package:flutter/material.dart';
 import 'package:iconly/iconly.dart';
 
-class BottomNavBar extends StatelessWidget {
-  final int selectedIndex;
-  final ValueChanged<int> onIconTapped;
-
-  const BottomNavBar({
-    required this.selectedIndex,
-    required this.onIconTapped,
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      currentIndex: selectedIndex,
-      onTap: onIconTapped,
-      items: [
-        BottomNavigationBarItem(
-          icon: Icon(
-            IconlyLight.home,
-            color: selectedIndex == 0 ? Colors.blue : Colors.grey,
-          ),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            IconlyLight.search,
-            color: selectedIndex == 1 ? Colors.blue : Colors.grey,
-          ),
-          label: 'Search',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            IconlyLight.chat,
-            color: selectedIndex == 2 ? Colors.blue : Colors.grey,
-          ),
-          label: 'Chat',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            IconlyLight.profile,
-            color: selectedIndex == 3 ? Colors.blue : Colors.grey,
-          ),
-          label: 'Profile',
-        ),
+Widget buildBottomNavigationBar(BuildContext context, int selectedIndex, void Function(int) onIconTapped) {
+  return Container(
+    height: 80,
+    margin: const EdgeInsets.all(12),
+    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+    decoration: BoxDecoration(
+      color: Colors.white.withOpacity(0.7), // Glassy effect
+      borderRadius: BorderRadius.circular(100),
+      boxShadow: [
+        BoxShadow(
+            color: Colors.black.withOpacity(0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 5)),
       ],
-      backgroundColor: Colors.white,
-      selectedItemColor: Colors.blue,
-      unselectedItemColor: Colors.grey,
-    );
+    ),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: List.generate(5, (index) {
+        final isActive = selectedIndex == index;
+        return GestureDetector(
+          onTap: () => onIconTapped(index),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            height: 60,
+            width: 60,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isActive ? Colors.white : Colors.transparent,
+            ),
+            child: Center(
+              child: Icon(
+                _getIconForIndex(index),
+                color: isActive ? Colors.black : Colors.grey,
+              ),
+            ),
+          ),
+        );
+      }),
+    ),
+  );
+}
+
+IconData _getIconForIndex(int index) {
+  switch (index) {
+    case 0:
+      return IconlyLight.home;
+    case 1:
+      return IconlyLight.wallet;
+    case 2:
+      return IconlyLight.location;
+    case 3:
+      return IconlyLight.time_circle;
+    case 4:
+      return IconlyLight.setting;
+    default:
+      return IconlyLight.home;
   }
 }
