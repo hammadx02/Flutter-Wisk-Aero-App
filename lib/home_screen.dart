@@ -142,9 +142,10 @@ class HomeScreen extends StatelessWidget {
                                 shape: BoxShape.circle,
                                 color: Colors.black,
                               ),
-                              child: const Icon(
-                                IconlyLight.arrow_right,
-                                color: Color(0XFFFFFFFF),
+                              child: Image.asset(
+                                scale: 15,
+                                'assets/images/right-up.png',
+                                color: const Color(0XFFFFFFFF),
                               ),
                             ),
                           ],
@@ -198,9 +199,10 @@ class HomeScreen extends StatelessWidget {
                                 shape: BoxShape.circle,
                                 color: Colors.black,
                               ),
-                              child: const Icon(
-                                IconlyLight.arrow_right,
-                                color: Color(0XFFFFFFFF),
+                              child: Image.asset(
+                                scale: 15,
+                                'assets/images/right-up.png',
+                                color: const Color(0XFFFFFFFF),
                               ),
                             ),
                           ],
