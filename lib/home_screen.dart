@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
@@ -195,14 +196,13 @@ class HomeScreen extends StatelessWidget {
                             Container(
                               height: 60,
                               width: 60,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Colors.black,
+                                color: Colors.grey[300],
                               ),
                               child: Image.asset(
                                 scale: 15,
                                 'assets/images/right-up.png',
-                                color: const Color(0XFFFFFFFF),
                               ),
                             ),
                           ],
