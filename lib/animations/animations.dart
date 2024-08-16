@@ -31,7 +31,7 @@ Animation<int> createGenerationCountAnimation(AnimationController controller) {
 AnimationController createLogoAnimationController(TickerProvider vsync) {
   return AnimationController(
     vsync: vsync,
-    duration: const Duration(seconds: 1),
+    duration: const Duration(seconds: 2),
   );
 }
 
@@ -44,6 +44,6 @@ Animation<double> createLogoAnimation(AnimationController controller) {
 AnimationController createContainerAnimationController(TickerProvider vsync) {
   return AnimationController(
     vsync: vsync,
-    duration: const Duration(milliseconds: 700),
+    duration: const Duration(milliseconds: 900),
   );
 }
