@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
@@ -130,7 +131,10 @@ class HomeScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Icon(IconlyLight.heart),
+                            Image.asset(
+                              scale: 15,
+                              'assets/images/helipad.png',
+                            ),
                             Container(
                               height: 60,
                               width: 60,
@@ -150,7 +154,7 @@ class HomeScreen extends StatelessWidget {
                           '28',
                           style: GoogleFonts.dmSans(
                             fontSize: 32,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w900,
                           ),
                         ),
                         Text(
@@ -173,6 +177,51 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: const Color(0XFFFFFFFF),
                     borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                              scale: 15,
+                              'assets/images/airplane.png',
+                            ),
+                            Container(
+                              height: 60,
+                              width: 60,
+                              decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Colors.black,
+                              ),
+                              child: const Icon(
+                                IconlyLight.arrow_right,
+                                color: Color(0XFFFFFFFF),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const Spacer(),
+                        Text(
+                          '6',
+                          style: GoogleFonts.dmSans(
+                            fontSize: 32,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                        Text(
+                          'Generations',
+                          style: GoogleFonts.dmSans(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
