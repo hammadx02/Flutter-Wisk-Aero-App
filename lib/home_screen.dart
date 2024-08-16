@@ -113,8 +113,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           const SizedBox(width: 7),
           const CircleAvatar(
             radius: 25,
-            backgroundImage: NetworkImage(
-              'https://images.unsplash.com/photo-1541710430735-5fca14c95b00?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
+            backgroundImage: AssetImage(
+              'assets/images/pp.jpeg',
             ),
           ),
           const SizedBox(width: 10),
@@ -399,4 +399,3 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     }
   }
 }
-
