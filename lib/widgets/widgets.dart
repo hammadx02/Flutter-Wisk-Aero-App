@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
-import 'package:wisk_aero_app/custom/custom_shape.dart';
 
 PreferredSizeWidget buildAppBar(
     BuildContext context, Animation<double> logoAnimation) {
